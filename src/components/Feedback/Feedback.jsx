@@ -87,11 +87,10 @@ class Feedback extends Component {
         <FeedbackOptions options={this.state} onLeaveFeedback={this.feedbackFunction}/>
   
         </Section>
-         {this.countTotalFeedback() === 0 ? (      <Notification message="There is no feedback"></Notification>
-  ) : ( <Section title="Statistics" good={this.state.good} neutral={this.state.neutral} bad={this.state.bad} total={this.countTotalFeedback()} positivePercentage={this.countPositiveFeedbackPercentage(this.countTotalFeedback())}>
-  <Statistics good={this.state.good} neutral={this.state.neutral} bad={this.state.bad} total={this.countTotalFeedback()} positivePercentage={this.countPositiveFeedbackPercentage(this.countTotalFeedback())}/>
-  
-  </Section>)}
+         {this.countTotalFeedback() === 0 ? (<Notification message="There is no feedback"></Notification> ) 
+         : ( <Section title="Statistics" good={this.state.good} neutral={this.state.neutral} bad={this.state.bad} total={this.countTotalFeedback()} positivePercentage={this.countPositiveFeedbackPercentage(this.countTotalFeedback())}>
+          <Statistics good={this.state.good} neutral={this.state.neutral} bad={this.state.bad} total={this.countTotalFeedback()} positivePercentage={this.countPositiveFeedbackPercentage(this.countTotalFeedback())}/>
+        </Section>)}
        
       </>
     }
